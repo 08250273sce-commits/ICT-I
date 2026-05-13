@@ -1,0 +1,20 @@
+excel_file = open("data.xlsx","w")
+print(excel_file)
+excel_file.close()
+append = open("data.xlsx","w")
+append.write("\nsangay: id 120")
+append.write("\nrinchen: id 121")
+append.write("\ntashi: id 122")
+append.write("\nphuntsho: id 123")
+append.write("\nsonam: id 124")
+append.close()
+opened_file = open("data.xlsx","r")
+print(opened_file.read())
+opened_file.close()
+name=input("enter a name: ")
+with open("data.xlsx","r") as f:
+    contents = f.read()
+    if name in contents:
+        print(name,"exists in the file.")
+    else:
+        print(name,"does not exist in the file.")
